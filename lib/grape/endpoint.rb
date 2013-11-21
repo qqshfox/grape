@@ -162,6 +162,10 @@ module Grape
       @params ||= @request.params
     end
 
+    def user_params
+      @user_params ||= @request.user_params
+    end
+
     # A filtering method that will return a hash
     # consisting only of keys that have been declared by a
     # `params` statement.

@@ -1,6 +1,7 @@
 module Grape
   class Request < Rack::Request
 
+    alias_method :user_params, :params
     def params
       @env['grape.request.params'] = begin
         params = Hashie::Mash.new(super)
